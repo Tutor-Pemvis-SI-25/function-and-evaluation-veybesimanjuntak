@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="TLAST"/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-18 09:12:11 PM"/>
+        <attribute name="created" value="VXNlcjtMQVBUT1AtVkVZQkU7MjAyNS0xMS0xODswODo0MzoxOSBQTTsyNTky"/>
+        <attribute name="edited" value="VXNlcjtMQVBUT1AtVkVZQkU7MjAyNS0xMS0xODswOToxMjoxMSBQTTsxOzI2ODk="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="perintah" type="String" array="False" size=""/>
+            <declare name="deskripsi, kodeMK, namaMK, dosen, deadline, namaFile, status" type="String" array="True" size="10"/>
+            <declare name="tingkat" type="Integer" array="True" size="10"/>
+            <declare name="hari" type="Integer" array="True" size="10"/>
+            <declare name="prioritas" type="Real" array="True" size="10"/>
+            <declare name="taskCount" type="Integer" array="False" size=""/>
+            <output expression="&quot; Masukkan perintah &quot;" newline="True"/>
+        </body>
+    </function>
+    <function name="HitungPrioritas" type="Real" variable="p">
+        <parameters>
+            <parameter name="tingkat" type="Integer" array="False"/>
+            <parameter name="hari" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="p" type="Real" array="False" size=""/>
+            <assign variable="p" expression="tingkat * (1.0 / hari)"/>
+        </body>
+    </function>
+    <function name="Rekomendasi" type="String" variable="">
+        <parameters>
+            <parameter name="prioritas" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <if expression="prioritas &gt; 3">
+                <then/>
+                <else/>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
